@@ -32,7 +32,10 @@ class PieViewController: UIViewController {
         view.addSubview(doneButton)
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         //Hide or show dismissal button
-        doneButton.isHidden = true
+        doneButton.isHidden = false
+        if sourceTraitCollection.horizontalSizeClass == .regular && sourceTraitCollection.verticalSizeClass == .regular {
+            doneButton.isHidden = true
+        }
         
         
         // Layout
